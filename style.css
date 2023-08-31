@@ -6,6 +6,12 @@ h1{
     padding: auto;
     margin: auto;
 }
+.button{
+    text-align: center;
+}
+
+
+
 .parent{
     display: flex;
     justify-content: center;
