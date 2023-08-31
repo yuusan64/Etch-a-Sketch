@@ -1,14 +1,17 @@
 
-function grid(num1,num2){
+function grid(num){
+var container=document.getElementById('container');
 var grid = document.createElement('div');
 grid.className = 'grid';
 grid.id='gridId';
+
 let index=0;
-for(let i=0;i<num1;i++){
+
+for(let i=0;i<num;i++){
   let columnElement=document.createElement('div');
   columnElement.className="column";
   columnElement.id="columnId";
-  for(let j=0;j<num2;j++){
+  for(let j=0;j<num;j++){
     let rowElement=document.createElement('div');
     rowElement.className="row";
     rowElement.id=index;
@@ -18,13 +21,13 @@ for(let i=0;i<num1;i++){
  grid.appendChild(columnElement);
 }
 document.body.appendChild(grid);
+container.appendChild(grid);
+document.body.appendChild(container);
 }
 
 function changeColor() {
-    const element = Array.from(document.getElementsByClassName("row"));
-    console.log(element.length);
-    let j=0;
-    element.forEach(colorButton => colorButton.addEventListener('mouseover', buttonHover));
+const element = Array.from(document.getElementsByClassName("row"));
+element.forEach(colorButton => colorButton.addEventListener('mouseover', buttonHover));
 element.forEach(colorButton => colorButton.addEventListener('mouseout', buttonStandard));
   }
 
@@ -49,6 +52,7 @@ function buttonHover() {
   this.style.backgroundColor = 'violet';
 }
 
+var a=prompt("Enter grid dimension from 1-100")
 
-grid(8,8)
+grid(a)
 changeColor()
