@@ -31,19 +31,6 @@ element.forEach(colorButton => colorButton.addEventListener('mouseover', buttonH
 element.forEach(colorButton => colorButton.addEventListener('mouseout', buttonStandard));
   }
 
-    /*for(let i=0;i<element.length;i++){
-      element[i].addEventListener('mouseover', buttonHover);
-      element[i].addEventListener('mouseout', buttonStandard);
-
-    element[i].addEventListener("mouseover", function onClick(event) {
-      event.target.style.backgroundColor = 'salmon';
-    });
-    element[j].addEventListener("mouseout", function onClick(event) {
-      event.target.style.backgroundColor = 'violet';
-    });
-    j++;
-  }*/
-
 function buttonStandard() {
   this.style.backgroundColor = 'salmon';
 }
